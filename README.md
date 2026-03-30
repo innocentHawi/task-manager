@@ -10,14 +10,14 @@ A RESTful API built with Laravel 10 and MySQL for managing tasks with full busin
 ---
 
 ## Live URL
-```
-https://task-manager-production-e7ba.up.railway.app
-```
 
-Quick test — paste this in your browser or Postman:
-```
+https://task-manager-production-e7ba.up.railway.app
+
+
+Quick test paste this in the browser or Postman:
+
 GET https://task-manager-production-e7ba.up.railway.app/api/tasks
-```
+
 
 ---
 
@@ -31,21 +31,16 @@ GET https://task-manager-production-e7ba.up.railway.app/api/tasks
 ### Steps
 
 **1. Clone the repository**
-```bash
 git clone https://github.com/innocentHawi/task-manager.git
 cd task-manager
-```
+
 
 **2. Install dependencies**
-```bash
 composer install
-```
 
 **3. Set up environment**
-```bash
 cp .env.example .env
 php artisan key:generate
-```
 
 **4. Configure your database in `.env`**
 ```env
@@ -58,9 +53,8 @@ DB_PASSWORD=your_password_here
 ```
 
 **5. Create the database**
-```sql
 CREATE DATABASE task_manager;
-```
+
 
 **6. Run migrations and seeders**
 ```bash
@@ -73,7 +67,7 @@ php artisan db:seed
 php artisan serve
 ```
 
-API is now running at `http://localhost:8000`
+API is now running at http://localhost:8000
 
 ---
 
@@ -83,11 +77,11 @@ API is now running at `http://localhost:8000`
 
 **2.** Go to [railway.app](https://railway.app) and sign in with GitHub
 
-**3.** Click **New Project** → **Deploy from GitHub repo** → select your repo
+**3.** Click New Project → Deploy from GitHub repo → select your repo
 
-**4.** Click **New** → **Database** → **Add MySQL**
+**4.** Click New → Database → Add MySQL
 
-**5.** In your app service → **Variables** tab → add the following:
+**5.** In your app service → Variables tab → add the following:
 ```env
 APP_NAME=TaskManager
 APP_ENV=production
@@ -106,7 +100,7 @@ DB_PASSWORD=${{MySQL.MYSQL_PASSWORD}}
 web: php artisan migrate --force && php artisan db:seed --force && php artisan serve --host=0.0.0.0 --port=$PORT
 ```
 
-**7.** Push changes — Railway auto-deploys on every push
+**7.** Push changes - Railway auto-deploys on every push
 
 **8.** Go to **Settings** → **Domains** → **Generate Domain** to get your live URL
 
